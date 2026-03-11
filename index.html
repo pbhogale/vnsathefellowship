@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishvanath Sathe Fellowship | Nath Valley School</title>
+  <style>
+    :root {
+      --navy: #1a2744;
+      --gold: #c5a047;
+      --warm-white: #faf8f4;
+      --text: #2c2c2c;
+      --text-light: #5a5a5a;
+      --border: #e2ddd5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: var(--text);
+      background: var(--warm-white);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    header .container {
+      padding: 0;
+    }
+
+    .fellowship-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .school-name {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      color: #b0b8c8;
+      font-weight: 400;
+    }
+
+    /* Sections */
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-light);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Key details grid */
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .detail-item {
+      padding: 20px 0;
+      border-top: 2px solid var(--gold);
+    }
+
+    .detail-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .detail-value {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Committee */
+    .committee-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .committee-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-light);
+    }
+
+    .committee-list li:last-child {
+      border-bottom: none;
+    }
+
+    .member-name {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Inaugural fellow highlight */
+    .fellow-highlight {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 28px 32px;
+      margin-top: 20px;
+    }
+
+    .fellow-highlight .fellow-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .fellow-highlight .fellow-period {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    /* Eligibility */
+    .eligibility-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .eligibility-list li {
+      padding: 8px 0 8px 20px;
+      position: relative;
+      color: var(--text-light);
+    }
+
+    .eligibility-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* Named for */
+    .namesake {
+      font-style: italic;
+      color: var(--text-light);
+      border-left: 2px solid var(--border);
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    /* Updates */
+    .update-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-date {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .update-item p {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #b0b8c8;
+      padding: 36px 24px;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      header { padding: 40px 20px 36px; }
+      .details-grid { grid-template-columns: 1fr; gap: 16px; }
+      .fellow-highlight { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="fellowship-label">Visiting Research Fellowship</div>
+      <h1>The Vishvanath Sathe Fellowship</h1>
+      <div class="school-name">Nath Valley School, Aurangabad</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>About the Fellowship</h2>
+      <p>The Vishvanath Sathe Fellowship is a quarter-long visiting fellowship that places an early-career researcher in mathematics or physics on the Nath Valley School campus. The fellow pursues their own research while engaging students and teachers through seminars, mentoring, collaborative projects, and conversations&mdash;strengthening scientific literacy, curiosity, and research practice at the school level.</p>
+      <p>Each cycle brings an accomplished researcher to campus for three months, devoting approximately four hours per week to student and teacher interactions, with the remaining time dedicated to their own scholarly work.</p>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <div class="detail-label">Duration</div>
+          <div class="detail-value">Three months per cycle</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Disciplines</div>
+          <div class="detail-value">Mathematics &amp; Physics</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Stipend</div>
+          <div class="detail-value">&#8377;1,00,000 per month (net)</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Location</div>
+          <div class="detail-value">Nath Valley School, Aurangabad</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The Namesake</h2>
+      <p class="namesake">The fellowship is named for Vishvanath Sathe, an early recruit to the Bhabha Atomic Research Centre (BARC) by Dr Homi Bhabha, remembered for his good-humoured scientific rationalism and lifelong curiosity about the universe.</p>
+    </section>
+
+    <section>
+      <h2>Eligibility</h2>
+      <p>Fellows are early-career researchers who meet the following criteria:</p>
+      <ul class="eligibility-list">
+        <li>Hold a PhD from a leading national or international university</li>
+        <li>Have peer-reviewed publications in reputable journals</li>
+        <li>Demonstrate enthusiasm for science communication and teaching</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Selection Committee</h2>
+      <p>Fellows are selected by a committee of eminent scientists and school leadership:</p>
+      <ul class="committee-list">
+        <li><span class="member-name">Prof. Johannes Berg</span> &mdash; University of Cologne</li>
+        <li><span class="member-name">Prof. Rahul Marathe</span> &mdash; IIT Delhi</li>
+        <li><span class="member-name">Dr Prasanna Bhogale</span> &mdash; Nath Valley alumnus</li>
+        <li><span class="member-name">Mr Ranjit Dass</span> &mdash; Director, Nath Valley School</li>
+        <li><span class="member-name">Dr Nandita Chaturvedi</span> &mdash; Inaugural Vishvanath Sathe Fellow</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Inaugural Fellow</h2>
+      <div class="fellow-highlight">
+        <div class="fellow-period">September &ndash; December 2025</div>
+        <div class="fellow-name">Dr Nandita Chaturvedi</div>
+        <p>Trained at St. Stephen's College (BSc), the University of Cologne (MSc), and the University of Pennsylvania (PhD), Dr Chaturvedi works at the intersection of statistical physics, evolutionary biology, and ecology. During her residency, she engaged closely with students and teachers&mdash;supporting inquiry-driven learning, guiding project design, and strengthening scientific thinking through sustained conversations and classroom-facing lectures.</p>
+        <p>Students from 11th and 12th grades presented research projects shaped by her mentorship, including explorations of albedo in managing urban temperature profiles and data-driven estimates of cosmological parameters. Jonathan Joshua received the inaugural Best Student Project Award for his project on the Hubble constant.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Updates</h2>
+      <div class="update-item">
+        <div class="update-date">December 2025</div>
+        <p>The inaugural cycle of the Vishvanath Sathe Fellowship concluded with student project presentations on 12 December 2025. Jonathan Joshua was awarded the first Best Student Project Award for his project, "Universe Expansion and the Hubble Constant." Dr Nandita Chaturvedi joins the selection committee for future cycles, continuing her association with the programme.</p>
+      </div>
+      <div class="update-item">
+        <div class="update-date">September 2025</div>
+        <p>Dr Nandita Chaturvedi began her residency as the first Vishvanath Sathe Visiting Fellow at Nath Valley School. During the fellowship, Dr Chaturvedi also delivered talks at the Government College of Engineering and the Department of Physics, Dr Babasaheb Ambedkar Marathwada University (BAMU), extending the programme's reach into Aurangabad's broader academic community.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; Nath Valley School, Aurangabad
+    </div>
+  </footer>
+
+</body>
+</html>
